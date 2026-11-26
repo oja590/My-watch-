@@ -6,6 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: unzip -q MyWatch.zip
+      - run: echo "android.useAndroidX=true" > MyWatch/gradle.properties
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
